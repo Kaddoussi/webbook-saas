@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WebBook SaaS — Turn your book into a living, breathing WebBook in 60 seconds</title>
+<meta name="description" content="Authors: stop shipping boring PDFs. Turn any manuscript into a living, multilingual, narrated, AI-companioned WebBook your readers will actually finish. Free to start." />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          violet: { 50:'#f5f3ff',500:'#8b5cf6',600:'#7c3aed',700:'#6d28d9' },
+          rose:   { 500:'#f43f5e',600:'#e11d48' },
+          amber:  { 500:'#f59e0b',600:'#d97706' }
+        },
+        fontFamily: {
+          sans:    ['Inter','system-ui','sans-serif'],
+          display: ['"Fraunces"','"Space Grotesk"','serif']
+        }
+      }
+    }
+  }
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-prefix="" class="bg-amber-50/30 dark:bg-[#0a0613] text-slate-800 dark:text-slate-200 antialiased font-sans">
+
+<div data-shell></div>
+
+<!-- ============== HERO ============== -->
+<section class="relative pt-32 pb-24 overflow-hidden">
+  <div class="absolute inset-0 wb-grid-bg"></div>
+  <div class="wb-orb wb-orb-1 w-[480px] h-[480px] -top-20 -left-20"></div>
+  <div class="wb-orb wb-orb-2 w-[420px] h-[420px] top-40 right-0"></div>
+  <div class="wb-orb wb-orb-3 w-[300px] h-[300px] bottom-0 left-1/3"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <div data-rv>
+      <span class="wb-chip"><i data-lucide="sparkles" class="w-3 h-3"></i> Built for authors · Free forever plan</span>
+      <h1 class="mt-5 font-display font-black text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-slate-900 dark:text-white">
+        Your book, <span class="wb-gradient-text">alive</span>.<br/>
+        In <span class="wb-highlight">sixty seconds</span>.
+      </h1>
+      <p class="mt-6 text-lg text-slate-600 dark:text-slate-300 max-w-xl">
+        AI agents can write a book in an hour. But who actually <em>reads</em> a 300-page PDF? <strong>WebBook</strong> ships with its own <a href="pages/webbook-agent.html" class="underline decoration-violet-500 decoration-2 underline-offset-2 hover:text-violet-500">AI agent</a> that turns your manuscript into a living, multilingual, narrated, AI-companioned book your readers will love — and finish.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="pages/join.html" class="wb-btn-primary rounded-xl px-6 py-3 font-semibold inline-flex items-center gap-2">
+          Start your WebBook free <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <a href="pages/demo.html" class="wb-btn-ghost rounded-xl px-6 py-3 font-semibold inline-flex items-center gap-2">
+          <i data-lucide="play-circle" class="w-4 h-4"></i> See a 90-second demo
+        </a>
+      </div>
+      <div class="mt-8 flex items-center gap-6 text-sm text-slate-500">
+        <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> No card needed</div>
+        <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Keep your rights</div>
+        <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Cancel anytime</div>
+      </div>
+    </div>
+
+    <!-- 3D Book + AI companion -->
+    <div data-rv data-rv-delay="2" class="relative">
+      <div class="wb-book max-w-md mx-auto">
+        <div class="wb-book-cover relative aspect-[3/4] bg-gradient-to-br from-violet-700 via-rose-600 to-amber-500 p-8 text-white">
+          <div class="absolute inset-0 wb-grid-bg opacity-30"></div>
+          <div class="relative h-full flex flex-col">
+            <span class="text-[11px] uppercase tracking-widest opacity-80">A WebBook by</span>
+            <span class="font-display font-bold text-2xl mt-1">Lina Aldridge</span>
+            <h3 class="font-display font-black text-4xl leading-tight mt-auto">The Quiet Algorithm</h3>
+            <p class="mt-3 text-sm text-white/80">A novel that reads, listens, and answers back.</p>
+            <div class="mt-4 flex items-center gap-2 text-xs">
+              <span class="bg-white/20 rounded-full px-2 py-0.5">12 languages</span>
+              <span class="bg-white/20 rounded-full px-2 py-0.5">Audiobook</span>
+              <span class="bg-white/20 rounded-full px-2 py-0.5">AI guide</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- floating AI bubble -->
+      <div class="absolute -bottom-4 -left-4 sm:-left-12 wb-glass rounded-2xl p-4 max-w-xs wb-float-y">
+        <div class="flex items-center gap-2 text-xs font-semibold text-violet-600 dark:text-violet-300">
+          <i data-lucide="bot" class="w-4 h-4"></i> Reader AI Companion
+        </div>
+        <p class="mt-2 text-sm text-slate-700 dark:text-slate-200">
+          "Hi! I'm Lina's reading guide. Ask me about chapter 3, or try the audio version?"
+        </p>
+        <div class="mt-2 flex gap-1"><span class="wb-typing-dot"></span><span class="wb-typing-dot"></span><span class="wb-typing-dot"></span></div>
+      </div>
+      <!-- floating chip -->
+      <div class="absolute -top-4 -right-2 sm:-right-8 wb-glass rounded-xl px-3 py-2 wb-float-y" style="animation-delay:-2s">
+        <div class="flex items-center gap-2 text-xs">
+          <i data-lucide="zap" class="w-4 h-4 text-amber-500"></i>
+          <span class="font-semibold">Live in 58s</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== AI WEBBOOK AGENT EMPHASIS ============== -->
+<section class="py-16 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="wb-glass rounded-3xl p-8 sm:p-10 grid lg:grid-cols-[1fr_1.1fr] gap-10 items-center wb-gradient-border" data-rv>
+      <div>
+        <span class="wb-chip"><i data-lucide="bot" class="w-3 h-3"></i> Powered by the WebBook Agent</span>
+        <h2 class="mt-4 font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-white">
+          AI-generated WebBooks. <span class="wb-gradient-text">Authored by you.</span>
+        </h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-300 text-lg">
+          The <strong>WebBook Agent</strong> is the AI co-author behind every WebBook. Give it an idea, an outline, or a manuscript — it plans, writes, translates, narrates, designs and ships. You stay in control of voice, facts, and rights.
+        </p>
+        <ul class="mt-6 space-y-2 text-sm text-slate-700 dark:text-slate-300">
+          <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 mt-1"></i><span><strong>Plans</strong> a 14-chapter outline with hooks, claims and citations.</span></li>
+          <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 mt-1"></i><span><strong>Writes</strong> in your voice — refuses to invent facts, cites everything.</span></li>
+          <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 mt-1"></i><span><strong>Ships</strong> in 40 languages with studio-grade narration baked in.</span></li>
+          <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 mt-1"></i><span><strong>Improves</strong> by reading your readers — drop-offs, questions, suggestions.</span></li>
+        </ul>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="pages/webbook-agent.html" class="wb-btn-primary rounded-xl px-5 py-2.5 font-semibold inline-flex items-center gap-2">Meet the WebBook Agent <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          <a href="pages/webbook-agent.html#api" class="wb-btn-ghost rounded-xl px-5 py-2.5 font-semibold inline-flex items-center gap-2"><i data-lucide="code-2" class="w-4 h-4"></i> Agent API</a>
+        </div>
+      </div>
+
+      <div class="relative" data-wb-anim>
+        <div class="rounded-2xl bg-[#0a0613] text-slate-200 font-mono text-[12.5px] leading-6 p-5 overflow-hidden border border-white/10 shadow-2xl shadow-violet-500/10">
+          <div class="flex items-center gap-1.5 mb-3 opacity-60">
+            <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+            <span class="ml-2 text-[11px] uppercase tracking-widest">webbook-agent · live</span>
+          </div>
+          <p class="text-slate-500"># 1. Plan</p>
+          <p><span class="text-violet-300">agent</span>: Outlining 14 chapters · 287 sources collected ✓</p>
+          <p class="text-slate-500 mt-3"># 2. Write</p>
+          <p><span class="text-violet-300">agent</span>: Drafting Ch. 7 in author's voice · style-locked ✓</p>
+          <p class="text-slate-500 mt-3"># 3. Translate</p>
+          <p><span class="text-violet-300">agent</span>: en → es, fr, ar, zh, de, pt, it, ja… 12/40 ✓</p>
+          <p class="text-slate-500 mt-3"># 4. Narrate</p>
+          <p><span class="text-violet-300">agent</span>: Synthesizing audio (consent + watermark) ✓</p>
+          <p class="text-slate-500 mt-3"># 5. Ship</p>
+          <p><span class="text-emerald-300">agent</span>: Live → <span class="text-amber-300">https://lina.webbook.app</span> · 58s elapsed ✓</p>
+        </div>
+        <div class="absolute -top-3 -right-3 wb-glass rounded-full px-3 py-1.5 text-xs font-semibold flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Agent active
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PROBLEM / PROMISE ============== -->
+<section class="py-20 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto" data-rv>
+      <span class="wb-chip">The shift</span>
+      <h2 class="mt-4 font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-white">
+        Writing a book has never been easier. <br class="hidden sm:block"/>
+        <span class="wb-gradient-text">Reading one — never harder.</span>
+      </h2>
+      <p class="mt-5 text-slate-600 dark:text-slate-300 text-lg">
+        AI agents draft 300 pages in an evening. But your readers' attention? It's gone in 30 seconds. WebBook closes that gap with books that <em>listen, explain, and evolve</em>.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-12">
+      <div class="wb-glass rounded-2xl p-7" data-wb-anim>
+        <div class="flex items-center gap-3 text-rose-500">
+          <i data-lucide="x-circle" class="w-6 h-6"></i>
+          <h3 class="font-display font-bold text-xl">The PDF era</h3>
+        </div>
+        <ul class="mt-4 space-y-2.5 text-slate-600 dark:text-slate-300">
+          <li class="flex gap-2"><i data-lucide="minus" class="w-4 h-4 mt-1 text-rose-400"></i> Static. One language. One voice.</li>
+          <li class="flex gap-2"><i data-lucide="minus" class="w-4 h-4 mt-1 text-rose-400"></i> No idea who reads what — or stops where.</li>
+          <li class="flex gap-2"><i data-lucide="minus" class="w-4 h-4 mt-1 text-rose-400"></i> Can't update without re-uploading everywhere.</li>
+          <li class="flex gap-2"><i data-lucide="minus" class="w-4 h-4 mt-1 text-rose-400"></i> Readers ghost in the first chapter.</li>
+        </ul>
+      </div>
+      <div class="wb-glass rounded-2xl p-7 wb-gradient-border" data-wb-anim>
+        <div class="flex items-center gap-3 text-violet-600 dark:text-violet-400">
+          <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+          <h3 class="font-display font-bold text-xl">The WebBook era</h3>
+        </div>
+        <ul class="mt-4 space-y-2.5 text-slate-700 dark:text-slate-200">
+          <li class="flex gap-2"><i data-lucide="plus" class="w-4 h-4 mt-1 text-emerald-500"></i> Living. 40 languages. Author's voice preserved.</li>
+          <li class="flex gap-2"><i data-lucide="plus" class="w-4 h-4 mt-1 text-emerald-500"></i> Per-chapter analytics. See what lands.</li>
+          <li class="flex gap-2"><i data-lucide="plus" class="w-4 h-4 mt-1 text-emerald-500"></i> Edit once. Every reader sees the latest.</li>
+          <li class="flex gap-2"><i data-lucide="plus" class="w-4 h-4 mt-1 text-emerald-500"></i> An AI companion answers reader questions 24/7.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HOW IT WORKS (3 STEPS) ============== -->
+<section class="py-20 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto" data-rv>
+      <span class="wb-chip">How it works</span>
+      <h2 class="mt-4 font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-white">
+        Three steps. <span class="wb-gradient-text">Sixty seconds.</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-12">
+      <div class="wb-glass rounded-2xl p-6 wb-lift" data-wb-anim>
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-600 to-rose-500 text-white flex items-center justify-center font-bold text-lg">1</div>
+        <h3 class="font-display font-bold text-xl mt-4 text-slate-900 dark:text-white">Drop your manuscript</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">PDF, Word, Markdown, Google Docs, Notion, or paste plain text. We accept whatever you have.</p>
+        <div class="mt-4 flex gap-2 text-xs flex-wrap">
+          <span class="wb-chip">.docx</span><span class="wb-chip">.md</span><span class="wb-chip">.pdf</span><span class="wb-chip">Notion</span>
+        </div>
+      </div>
+      <div class="wb-glass rounded-2xl p-6 wb-lift" data-wb-anim data-rv-delay="1">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500 to-amber-500 text-white flex items-center justify-center font-bold text-lg">2</div>
+        <h3 class="font-display font-bold text-xl mt-4 text-slate-900 dark:text-white">Pick a vibe</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Choose a cover style, narrator voice, languages, and the AI companion's tone. We pre-fill smart defaults.</p>
+        <div class="mt-4 flex gap-2 text-xs flex-wrap">
+          <span class="wb-chip">12 themes</span><span class="wb-chip">8 voices</span><span class="wb-chip">40 languages</span>
+        </div>
+      </div>
+      <div class="wb-glass rounded-2xl p-6 wb-lift" data-wb-anim data-rv-delay="2">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-violet-600 text-white flex items-center justify-center font-bold text-lg">3</div>
+        <h3 class="font-display font-bold text-xl mt-4 text-slate-900 dark:text-white">Ship the link</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Get a URL like <code class="text-violet-600 dark:text-violet-300">yourbook.webbook.app</code>. Share. Tweet. Email. Watch readers actually read.</p>
+        <div class="mt-4 flex gap-2 text-xs flex-wrap">
+          <span class="wb-chip">Custom domain</span><span class="wb-chip">SEO ready</span><span class="wb-chip">Embeddable</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 12 FEATURES GRID ============== -->
+<section class="py-20 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-end justify-between flex-wrap gap-4" data-rv>
+      <div>
+        <span class="wb-chip">12 capabilities</span>
+        <h2 class="mt-3 font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-white">Everything a book wants <span class="wb-gradient-text">to be</span>.</h2>
+      </div>
+      <a href="pages/features.html" class="wb-link-underline text-sm font-semibold text-violet-600 dark:text-violet-300 inline-flex items-center gap-1">All features <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10" id="wb-features-grid">
+      <!-- populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOR AUDIENCES (Authors / Readers / Orgs) ============== -->
+<section class="py-20 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto" data-rv>
+      <span class="wb-chip">Who it's for</span>
+      <h2 class="mt-4 font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-white">A new chapter for <span class="wb-gradient-text">everyone</span> who loves books.</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-12">
+      <a href="pages/for-authors.html" class="wb-glass rounded-2xl p-7 wb-lift block group" data-wb-anim>
+        <span data-wb-audience="authors" data-size="64" class="block"></span>
+        <h3 class="font-display font-bold text-xl mt-4 text-slate-900 dark:text-white">For Authors</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Ship in a minute. Edit forever. Reach 40 languages. Earn from page one.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-violet-600 dark:text-violet-300 group-hover:gap-2 transition-all">Read more <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+      </a>
+      <a href="pages/for-readers.html" class="wb-glass rounded-2xl p-7 wb-lift block group" data-wb-anim data-rv-delay="1">
+        <span data-wb-audience="readers" data-size="64" class="block"></span>
+        <h3 class="font-display font-bold text-xl mt-4 text-slate-900 dark:text-white">For Readers</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Ask the book questions. Listen on the train. Read in your language. Take notes.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-rose-500 group-hover:gap-2 transition-all">Read more <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+      </a>
+      <a href="pages/for-organizations.html" class="wb-glass rounded-2xl p-7 wb-lift block group" data-wb-anim data-rv-delay="2">
+        <span data-wb-audience="organizations" data-size="64" class="block"></span>
+        <h3 class="font-display font-bold text-xl mt-4 text-slate-900 dark:text-white">For Organizations</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Onboarding manuals, training, playbooks, textbooks — that get read.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-amber-500 group-hover:gap-2 transition-all">Read more <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== STATS ============== -->
+<section class="py-16 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="wb-glass rounded-3xl p-10 wb-gradient-border" data-rv>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div>
+          <p class="wb-stat-num text-4xl sm:text-5xl"><span data-counter="60" data-suffix="s">0s</span></p>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">From manuscript to live</p>
+        </div>
+        <div>
+          <p class="wb-stat-num text-4xl sm:text-5xl"><span data-counter="40" data-suffix="">0</span></p>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Auto-translated languages</p>
+        </div>
+        <div>
+          <p class="wb-stat-num text-4xl sm:text-5xl"><span data-counter="3.4" data-decimals="1" data-suffix="x">0</span></p>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Higher completion rate</p>
+        </div>
+        <div>
+          <p class="wb-stat-num text-4xl sm:text-5xl"><span data-counter="0" data-suffix="">0</span><sup class="text-2xl">$</sup></p>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Free forever plan</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TESTIMONIALS ============== -->
+<section class="py-20 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto" data-rv>
+      <span class="wb-chip">Voices</span>
+      <h2 class="mt-4 font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-white">Authors who <span class="wb-gradient-text">stopped shipping PDFs</span>.</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-12">
+      <figure class="wb-glass rounded-2xl p-6 wb-lift" data-wb-anim>
+        <i data-lucide="quote" class="w-6 h-6 text-violet-500"></i>
+        <blockquote class="mt-3 text-slate-700 dark:text-slate-200">My readers <span class="wb-highlight">finished the book</span>. For the first time in my career, I have analytics that say so.</blockquote>
+        <figcaption class="mt-4 flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-gradient-to-br from-violet-500 to-rose-500 flex items-center justify-center text-white font-bold">L</span>
+          <div>
+            <p class="font-semibold text-slate-900 dark:text-white text-sm">Lina Aldridge</p>
+            <p class="text-xs text-slate-500">Novelist · 4 WebBooks</p>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="wb-glass rounded-2xl p-6 wb-lift" data-wb-anim data-rv-delay="1">
+        <i data-lucide="quote" class="w-6 h-6 text-rose-500"></i>
+        <blockquote class="mt-3 text-slate-700 dark:text-slate-200">I shipped my non-fiction in 8 languages on day one. Sales 3x what my last book did in a year.</blockquote>
+        <figcaption class="mt-4 flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-gradient-to-br from-rose-500 to-amber-500 flex items-center justify-center text-white font-bold">M</span>
+          <div>
+            <p class="font-semibold text-slate-900 dark:text-white text-sm">Mateo Ruiz</p>
+            <p class="text-xs text-slate-500">Productivity author</p>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="wb-glass rounded-2xl p-6 wb-lift" data-wb-anim data-rv-delay="2">
+        <i data-lucide="quote" class="w-6 h-6 text-amber-500"></i>
+        <blockquote class="mt-3 text-slate-700 dark:text-slate-200">The AI companion answers what readers email me about. I get my evenings back.</blockquote>
+        <figcaption class="mt-4 flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-violet-500 flex items-center justify-center text-white font-bold">A</span>
+          <div>
+            <p class="font-semibold text-slate-900 dark:text-white text-sm">Aiko Tan</p>
+            <p class="text-xs text-slate-500">Educator & textbook author</p>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WEBBOOK AGENT (key emphasis) ============== -->
+<section id="webbook-agent" class="py-20 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="wb-glass rounded-3xl p-8 sm:p-12 wb-gradient-border relative overflow-hidden" data-rv>
+      <div class="absolute inset-0 wb-grid-bg opacity-25"></div>
+      <div class="relative grid lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
+        <div>
+          <span class="wb-chip"><i data-lucide="bot" class="w-3 h-3"></i> Meet the WebBook Agent</span>
+          <h2 class="mt-4 font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-white">
+            Any book. <span class="wb-gradient-text">A WebBook in minutes</span>. Powered by an AI agent.
+          </h2>
+          <p class="mt-5 text-slate-600 dark:text-slate-300 text-lg">
+            The <strong>WebBook Agent</strong> is the engine behind every WebBook. Hand it a manuscript — PDF, .docx, Markdown, Notion, or a simple folder of chapters — and it builds a fully alive WebBook for you: cover, chapters, narration, AI reader companion, multilingual editions, and a public link to share. <span class="text-slate-900 dark:text-white font-semibold">No formatting. No coding. No waiting.</span>
+          </p>
+          <ul class="mt-6 space-y-2.5 text-slate-700 dark:text-slate-200">
+            <li class="flex gap-3"><i data-lucide="zap" class="w-5 h-5 mt-0.5 text-amber-500"></i> <span>Drop your manuscript → get a live, branded WebBook URL in <strong>under 5 minutes</strong>.</span></li>
+            <li class="flex gap-3"><i data-lucide="languages" class="w-5 h-5 mt-0.5 text-emerald-500"></i> <span>Auto-translates into <strong>40+ languages</strong> while preserving your voice.</span></li>
+            <li class="flex gap-3"><i data-lucide="mic" class="w-5 h-5 mt-0.5 text-violet-500"></i> <span>Generates a studio-quality <strong>audiobook</strong> and an <strong>AI reader companion</strong> for every chapter.</span></li>
+            <li class="flex gap-3"><i data-lucide="refresh-ccw" class="w-5 h-5 mt-0.5 text-cyan-500"></i> <span>Edit once, everywhere updates. The agent re-narrates, re-translates, and re-publishes for you.</span></li>
+            <li class="flex gap-3"><i data-lucide="share-2" class="w-5 h-5 mt-0.5 text-rose-500"></i> <span>Includes <strong>SEO, sharing kits, custom domain, paywalls and analytics</strong> out of the box.</span></li>
+          </ul>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="pages/how-it-works.html" class="wb-btn-primary rounded-xl px-6 py-3 font-semibold inline-flex items-center gap-2">
+              See the agent in action <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="pages/features.html" class="wb-btn-ghost rounded-xl px-6 py-3 font-semibold inline-flex items-center gap-2">
+              <i data-lucide="list" class="w-4 h-4"></i> Full feature list
+            </a>
+          </div>
+          <p class="mt-4 text-xs text-slate-500">
+            Authors keep 100% of their rights. The agent is your assistant, never the author.
+          </p>
+        </div>
+
+        <!-- Agent visual -->
+        <div class="relative">
+          <div class="wb-glass rounded-2xl p-6 relative">
+            <div class="flex items-center gap-3">
+              <span class="relative inline-flex w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-600 via-rose-500 to-amber-500 items-center justify-center">
+                <i data-lucide="bot" class="w-6 h-6 text-white"></i>
+                <span class="absolute inset-0 rounded-2xl border border-violet-400/40 animate-ping"></span>
+              </span>
+              <div>
+                <p class="font-display font-bold text-slate-900 dark:text-white">WebBook Agent</p>
+                <p class="text-xs text-emerald-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Online · ready to publish</p>
+              </div>
+            </div>
+            <div class="mt-5 space-y-2.5">
+              <div class="flex items-start gap-2 text-sm">
+                <i data-lucide="upload" class="w-4 h-4 mt-0.5 text-violet-500 shrink-0"></i>
+                <span class="text-slate-700 dark:text-slate-200"><span class="font-semibold">manuscript.docx</span> received · 312 pages</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0"></i>
+                <span class="text-slate-700 dark:text-slate-200">Chapters detected · cover designed</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0"></i>
+                <span class="text-slate-700 dark:text-slate-200">12 languages translated · narrator voice trained</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0"></i>
+                <span class="text-slate-700 dark:text-slate-200">Reader AI companion online for every chapter</span>
+              </div>
+              <div class="flex items-start gap-2 text-sm">
+                <i data-lucide="link" class="w-4 h-4 mt-0.5 text-rose-500 shrink-0"></i>
+                <span class="text-slate-700 dark:text-slate-200">Live at <code class="text-violet-600 dark:text-violet-300">yourbook.webbook.app</code></span>
+              </div>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-200/60 dark:border-white/10">
+              <p class="text-xs text-slate-500"><span class="font-semibold text-slate-700 dark:text-slate-200">Total time:</span> 4 min 38 s</p>
+            </div>
+          </div>
+          <!-- Floating chip -->
+          <div class="absolute -top-3 -right-3 wb-glass rounded-xl px-3 py-2 wb-float-y" style="animation-delay:-1s">
+            <div class="flex items-center gap-2 text-xs font-semibold">
+              <i data-lucide="sparkles" class="w-4 h-4 text-amber-500"></i> Authored by you · powered by the agent
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FINAL CTA ============== -->
+<section class="py-24 relative">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-rv>
+    <div class="wb-glass rounded-3xl p-10 sm:p-14 relative overflow-hidden">
+      <div class="absolute inset-0 wb-grid-bg opacity-30"></div>
+      <div class="relative">
+        <span class="wb-chip">Ready when you are</span>
+        <h2 class="mt-4 font-display font-bold text-3xl sm:text-5xl text-slate-900 dark:text-white">
+          Your readers <span class="wb-gradient-text">deserve a living book</span>.
+        </h2>
+        <p class="mt-5 text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+          Free forever to start. No credit card. Keep your rights, your data, and your readers. Ship your first WebBook before you finish your coffee.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3 justify-center">
+          <a href="pages/join.html" class="wb-btn-primary rounded-xl px-7 py-3.5 font-semibold inline-flex items-center gap-2">
+            Start free <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="pages/demo.html" class="wb-btn-ghost rounded-xl px-7 py-3.5 font-semibold inline-flex items-center gap-2">
+            <i data-lucide="play-circle" class="w-4 h-4"></i> Watch a demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-shell-foot></div>
+
+<script src="js/logos.js"></script>
+<script src="js/megamenu.js"></script>
+<script src="js/shell.js"></script>
+<script src="js/main.js"></script>
+<script src="js/api.js"></script>
+<script>
+  // Render the 12 features grid using WBLogos
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      const grid = document.getElementById('wb-features-grid');
+      if (!grid || !window.WBLogos) return;
+      grid.innerHTML = window.WBLogos.FEATURES.map((f, i) => `
+        <a href="pages/features.html#${f.slug}" class="wb-glass rounded-2xl p-5 wb-lift block group" data-wb-anim data-rv-delay="${i % 4}">
+          <span data-wb-icon="${f.slug}" data-size="56" class="block"></span>
+          <h3 class="font-display font-bold text-base mt-4 text-slate-900 dark:text-white">${f.name}</h3>
+          <p class="mt-1.5 text-xs text-slate-600 dark:text-slate-400">${f.desc}</p>
+        </a>
+      `).join('');
+      window.WBLogos.renderAuto();
+      // re-observe new anim elements
+      const wbIO = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); wbIO.unobserve(e.target); } });
+      }, { threshold: 0.1 });
+      grid.querySelectorAll('[data-wb-anim]').forEach(el => wbIO.observe(el));
+      if (window.lucide) lucide.createIcons();
+    }, 200);
+  });
+</script>
+</body>
+</html>
